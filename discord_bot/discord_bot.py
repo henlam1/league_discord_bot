@@ -32,18 +32,10 @@ async def on_message(message):
 
     command = message.content 
     # initial command
-    if command.startswith('8=D') or command.startswith('/cum') or command.startswith('/build'):
+    if command.startswith('/build'):
         try: 
             roles = ['top', 'jungle', 'mid', 'middle', 'adc', 'support', 'aram']
-            if command.startswith('/cum'):
-                if command.split(' ')[1].strip() == "in" and command.split(' ')[2].strip() == "me":
-                    await message.channel.send("Yes DADDY :FLUSH:")
-                    return
-                champion_and_role = command.split('/cum')[1].strip()
-            elif command.startswith('8=D'):
-                champion_and_role = command.split('8=D')[1].strip()
-            else:
-                champion_and_role = command.split('/build')[1].strip()
+            champion_and_role = command.split('/build')[1].strip()
             champion_and_role = champion_and_role.split(" ")
             words = len(champion_and_role)
             champion_and_role = " ".join(champion_and_role)
